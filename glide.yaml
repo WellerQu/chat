@@ -1,0 +1,7 @@
+package: github.com/chat
+import:
+- package: github.com/codegangsta/cli
+- package: github.com/labstack/gommon
+  subpackages:
+  - color
+- package: github.com/mattn/go-colorable

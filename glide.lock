@@ -1,0 +1,18 @@
+hash: e2b107924f82d1101b5bb07c780e0f744e0bda2c008eed615929b2c210c9b8ae
+updated: 2016-10-18T09:52:55.640007099+08:00
+imports:
+- name: github.com/codegangsta/cli
+  version: 55f715e28c46073d0e217e2ce8eb46b0b45e3db6
+- name: github.com/labstack/gommon
+  version: f3b1a1b3bd4726161e1200863d278df7da5e66ff
+  subpackages:
+  - color
+- name: github.com/mattn/go-colorable
+  version: 6c903ff4aa50920ca86087a280590b36b3152b9c
+- name: github.com/mattn/go-isatty
+  version: 66b8e73f3f5cda9f96b69efd03dd3d7fc4a5cdb8
+- name: golang.org/x/sys
+  version: 002cbb5f952456d0c50e0d2aff17ea5eca716979
+  subpackages:
+  - unix
+devImports: []
