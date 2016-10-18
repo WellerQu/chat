@@ -43,7 +43,7 @@ var cmds = []cli.Command{
 
 			wl := []string{"<cd.url=互动百科@", "", "&prd=button_doc_jinru>", "", "<br>", "\n"}
 			srp := strings.NewReplacer(wl...)
-			ret := srp.Replace(reply.Text + "\n" + reply.URL)
+			ret := srp.Replace(reply.Text)
 
 			log.Printf("%s: %s", color.Green("Alice say", color.B), color.Underline(ret))
 		},
