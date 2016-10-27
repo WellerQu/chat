@@ -14,7 +14,7 @@ import (
 
 const (
 	originTuLingURL = "http://www.tuling123.com/openapi/api?key=%s&info=%s"
-	tlkey           = "a5052a22b8232be1e387ff153e823975"
+	tlkey           = "1c051c06a8b24f29813dab1d5e85d693"
 )
 
 // command list which supported
@@ -24,7 +24,7 @@ var cmds = []cli.Command{
 		Usage: "Listen to you",
 		Action: func(ctx *cli.Context) {
 			if len(ctx.Args()) == 0 {
-				fmt.Println("what did you say?")
+				aliceSay("你刚才说啥? 本宝宝没听清楚, 命令你再说一遍!")
 				return
 			}
 
@@ -45,7 +45,7 @@ var cmds = []cli.Command{
 			srp := strings.NewReplacer(wl...)
 			ret := srp.Replace(reply.Text)
 
-			log.Printf("%s: %s", color.Green("Alice say", color.B), color.Underline(ret))
+			aliceSay(ret)
 		},
 	},
 }
@@ -53,6 +53,10 @@ var cmds = []cli.Command{
 type tlReply struct {
 	code int
 	Text string `json:"text"`
+}
+
+func aliceSay(what string) {
+	log.Printf("%s: %s", color.Green("猫小咪说", color.B), color.Underline(what))
 }
 
 func main() {
